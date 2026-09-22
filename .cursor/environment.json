@@ -1,0 +1,4 @@
+{
+  "name": "Ankimon dev (headless harness + Qt tests)",
+  "install": "set -e\ngit submodule update --init --recursive\nsudo apt-get update -qq\nsudo apt-get install -y -qq --no-install-recommends python3-venv xvfb x11-utils libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0 libxcb-render-util0 libxcb-xinerama0 libxcb-xfixes0 libxcb-cursor0 libegl1 libgbm1 libpulse0 libnss3 libasound2t64 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libxtst6\npython3 -m pip install --user --break-system-packages -q requests\npython3 -m venv venv\n./venv/bin/python -m pip install --upgrade -q pip\n./venv/bin/pip install -q -r requirements.txt"
+}
